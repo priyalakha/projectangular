@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container bg-dark"></div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+        <!-- For Logo
+          <a class="navbar-brand" href="#">
+           <img src="bird.jpg" alt="logo" style="width:40px;">
+         </a>
+       -->
+       <!-- Toggler/collapsibe Button -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+         <ul class="navbar-nav justify-content-end">
+           <li class="nav-item">
+             <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+           </li>
+         </ul>
+       </div>
+       </nav>
+
+<div class="container bg-info" style="margin-top:56px;">
+  <h2>Login</h2>
+  <form action="">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name"  placeholder="Enter name" name="name" >
+    <!--
+    <input type="text" class="form-control" id="name" required minlength="5" maxlength="30" [[ngModel]]="model.name" placeholder="Enter name" name="name" #name="ngModel">
+     <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+        <div [hidden]="!name.errors.required">
+           Name is required!
+        </div>
+        <div [hidden]="!name.errors.minlength">
+           Name must be at least 5 characters long!
+        </div>
+        <div [hidden]="!name.errors.maxlength">
+          Name must be less than 31 characters!
+        </div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd"  placeholder="Enter password" name="pswd">
+    <!--
+    <input type="password" class="form-control" id="pwd" required minlength="8" maxlength="25" pattern="^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8}$" [[ngModel]]="model.pwd" placeholder="Enter password" name="pswd" #pwd="ngModel">
+     <div *ngIf="pwd.errors && (pwd.dirty || pwd.touched)" class="alert alert-danger">
+        <div [hidden]="!pwd.errors.required">
+           Password is required!
+        </div>
+        <div [hidden]="!pwd.errors.minlength">
+           Password must be at least 8 characters long!
+        </div>
+        <div [hidden]="!pwd.errors.maxlength">
+          Password must be less than 31 characters!
+        </div>
+        <div [hidden]="!pwd.errors.pattern">
+          Password must be include at least 1 Capital character,1 small character,1 special character !
+        </div>
+      </div>-->
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
